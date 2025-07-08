@@ -14,7 +14,7 @@ from models.book import Book
 
 @app.route('/')
 def index():
-    return "Nieco"
+    return "Main"
 
 @app.route('/authors')
 def authors():
@@ -36,7 +36,7 @@ def add_book():
     authors = Author.query.all()
     genres = Genre.query.all()
 
-    message = None  # premenná pre správu
+    message = None
 
     if request.method == 'POST':
         new_book = Book(
