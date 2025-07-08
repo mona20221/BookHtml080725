@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoznam žánrov</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zoznam žánrov</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Názov</th>
+                <th>Popis</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for genre in genres %}
+            <tr>
+                <td>{{ genre.genre_id }}</td>
+                <td>{{ genre.name }}</td>
+                <td>{{ genre.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
